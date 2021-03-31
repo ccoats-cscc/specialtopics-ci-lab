@@ -4,14 +4,15 @@ node {
 
         git url: 'https://github.com/ccoats-cscc/specialtopics-ci-lab'
   }
+  try {
 
-  stage('Build') {
+    stage('Build') {
 
-    withMaven (maven: 'maven3') {
-        sh "mvn package"
+        withMaven (maven: 'maven3') {
+            sh "mvn package"
+        }
     }
-
-    echo "hello"
+  } finally {
+        junit 'build/reports/**/*.xml'
   }
-  // you should add a test report here
 }
