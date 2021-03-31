@@ -13,6 +13,6 @@ node {
         }
     }
   } finally {
-        junit 'build/reports/*.xml'
+        junit '/home/CSCC/ccoats2/IdeaProjects/specialtopics-ci-lab/*.xml'
   }
 }
