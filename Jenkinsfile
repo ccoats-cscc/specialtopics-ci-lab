@@ -13,6 +13,6 @@ node {
         }
     }
   } finally {
-        junit 'build/reports/**/*.xml'
+        junit 'build/reports/*.xml'
   }
 }
